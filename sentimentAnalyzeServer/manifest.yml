@@ -2,7 +2,7 @@
 applications:
 - path: .
   name: victoria-luidia-sentiment-analyzer #change to be unique in IBM Cloud
-  buildpack: sdk-for-nodejs
+  buildpacks: [https://github.com/cloudfoundry/nodejs-buildpack]
   memory: 256M
   instances: 1
   random-route: true
