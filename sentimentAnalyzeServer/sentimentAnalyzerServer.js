@@ -19,9 +19,6 @@ function getNLUInstance() {
 	return naturalLanguageUnderstanding;
 }
 
-const express = require('express');
-const app = new express();
-
 app.use(express.static('client'))
 
 const cors_app = require('cors');
@@ -50,5 +47,4 @@ app.get("/text/sentiment", (req,res) => {
 
 let server = app.listen(8080, () => {
     console.log('Listening', server.address().port)
-})
-
+});
